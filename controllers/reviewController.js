@@ -71,7 +71,7 @@ exports.addReply = async (req, res) => {
     }
 
     await review.save();
-    res.status(201).json({ message: "Reply added" });
+   res.status(201).json(newReply);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
